@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Mulish:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:wght@300;400;700&display=swap");
+
 * {
   margin: 0%;
   padding: 0%;
@@ -5,18 +7,20 @@
 }
 body {
   background-color: #222;
+  font-family: "Poppins", sans-serif;
 }
 #root {
   display: flex;
-  margin: 40px 20px;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   flex-direction: column;
+  margin: auto;
 }
 .header {
-  width: 280px;
-  height: 35px;
+  width: 260px;
+  height: 45px;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-content: center;
   background-color: #e5e7eb;
@@ -27,7 +31,7 @@ body {
   border-style: solid;
   background-color: #e5e7eb;
   border-color: #e5e7eb;
-  padding: 5px;
+  padding: 5px 10px;
   width: 220px;
   font-size: 15px;
 }
@@ -44,11 +48,64 @@ input:focus {
 }
 .todo {
   color: #f2f2f2;
-  background-color: rgba(227, 22, 87, 0.93);
-  padding: 5px 10px;
+  background-color: rgba(227, 22, 87, 1);
   width: 280px;
   margin: 10px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
 }
 label {
-  padding: 5px 10px;
+  padding: 0px 10px;
+  position: absolute;
+  width: 215px;
+  overflow: hidden;
+}
+.logo {
+  background-color: rgba(227, 22, 87, 1);
+  border: none;
+}
+.icon {
+  width: 25px;
+  height: 28px;
+}
+h1 {
+  color: #f2f2f2;
+  font-weight: 500;
+  margin-top: 30px;
+}
+h3 {
+  color: #f2f2f2;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.strike {
+  text-decoration: line-through;
+}
+@media (min-width: 768px) {
+  .header {
+    width: 500px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  label {
+    padding: 0px 10px;
+    position: absolute;
+    width: 520px;
+    overflow: hidden;
+  }
+  .input {
+    width: 450px;
+    position: relative;
+  }
+  .todo {
+    width: 600px;
+    margin: 15px 0px 0px 0px;
+  }
 }

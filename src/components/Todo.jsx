@@ -9,10 +9,32 @@ const Todo = () => {
     setTodoList([...todoList, todo]);
   };
 
+  const handleDeleteTodo = (id) => {
+    const filteredData = todoList.filter((e) => e.id !== id);
+    setTodoList(filteredData);
+  };
+
+  const handleChangeStatus = (id, title) => {
+    const updatedList = todoList.map((todo) => {
+      if (todo.id === id) {
+        todo.status = !todo.status;
+      }
+      return todo;
+    });
+    console.log(id, title);
+    setTodoList(updatedList);
+  };
+
   return (
     <>
+      <h1>Todo List App</h1>
+      <h3>By Anjali Dalal</h3>
       <TodoInput handleTodoInput={handleTodoInput} />
-      <TodoList list={todoList} />
+      <TodoList
+        list={todoList}
+        handleDeleteTodo={handleDeleteTodo}
+        handleChangeStatus={handleChangeStatus}
+      />
     </>
   );
 };
