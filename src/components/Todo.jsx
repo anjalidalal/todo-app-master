@@ -35,6 +35,15 @@ const Todo = () => {
         handleDeleteTodo={handleDeleteTodo}
         handleChangeStatus={handleChangeStatus}
       />
+      <button
+        onClick={() => {
+          const updatedList = todoList.filter((e) => !e.status);
+          setTodoList(updatedList);
+        }}
+        className="showall"
+      >
+        Show All
+      </button>
     </>
   );
 };

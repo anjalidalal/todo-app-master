@@ -24,6 +24,7 @@ body {
   justify-content: space-between;
   align-content: center;
   background-color: #e5e7eb;
+  margin-bottom: 20px;
 }
 .input {
   color: rgb(34, 34, 34);
@@ -88,11 +89,21 @@ h3 {
 .strike {
   text-decoration: line-through;
 }
+.showall {
+  background-color: rgb(28 148 217);
+  color: #f2f2f2;
+  border: none;
+  text-transform: uppercase;
+  width: 100px;
+  padding: 10px;
+  margin: 30px 10px;
+  font-weight: 500;
+}
 @media (min-width: 768px) {
   .header {
     width: 500px;
     height: 50px;
-    margin-bottom: 10px;
+    margin: 30px 0px;
   }
   label {
     padding: 0px 10px;
@@ -107,5 +118,9 @@ h3 {
   .todo {
     width: 600px;
     margin: 15px 0px 0px 0px;
+  }
+  .showall {
+    width: 120px;
+    height: 45px;
   }
 }

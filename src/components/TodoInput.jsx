@@ -14,8 +14,12 @@ const TodoInput = ({ handleTodoInput }) => {
       status: false,
       id: nanoid(4),
     };
-    handleTodoInput(data);
-    setText("");
+    if (text === "") {
+      alert("Enter task");
+    } else {
+      handleTodoInput(data);
+      setText("");
+    }
   };
 
   return (
